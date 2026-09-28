@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Применяем шрифт ко всему сайту */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* --- Топбар --- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.topbar__brand {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.topbar__note {
+  font-size: 11px;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+/* --- Заголовок --- */
+.heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.heading h1 {
+  margin: 0;
+}
+
+.heading__sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.tickets {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.tickets__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  object-fit: cover;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+}
+
+.ticket:first-of-type {
+  border-top: 1px solid #000;
+}
+
+.ticket__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket__date {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.ticket__place {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.ticket__buy {
+  background: none;
+  border: 1px solid #000;
+  color: #000;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ticket__buy:hover {
+  background: #000;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 420px;
+  margin: 64px auto 32px;
+  padding-top: 20px;
+  border-top: 1px solid #000;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer__brand {
+  font-weight: 700;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__copy {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* Мобильная версия — футер в колонку */
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.ticket__buy {
+  display: inline-block;
+  background: none;
+  border: 1px solid #000;
+  color: #000;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ticket__buy:hover {
+  background: #000;
+  color: #fff;
+}
